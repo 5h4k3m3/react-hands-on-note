@@ -10,7 +10,7 @@ export const Sidebar = ({ onAddNote, notes }) => {
       </div>
       <div className="appSidebarNotes">
         {notes.map((note) => (
-          <div className="appSidebarNote">
+          <div className="appSidebarNote" key={note.id}>
             <div className="sidebarNoteTitle">
               <strong>{note.title}</strong>
               <button>Delete</button>
