@@ -12,7 +12,7 @@ export const App = () => {
     const newNote = {
       id: uuid(),
       title: "new note",
-      content: "contents",
+      content: "",
       modDate: Date.now(),
     };
     setNotes([...notes, newNote]);
