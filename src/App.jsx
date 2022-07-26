@@ -23,6 +23,10 @@ export const App = () => {
     setNotes(filterNotes);
   };
 
+  const getActiveNote = () => {
+    return notes.find((note) => note.id === activeNote);
+  };
+
   return (
     <div className="App">
       <Sidebar
@@ -32,7 +36,7 @@ export const App = () => {
         activeNote={activeNote}
         setActiveNote={setActiveNote}
       />
-      <Main />
+      <Main activeNote={getActiveNote()} />
     </div>
   );
 };
